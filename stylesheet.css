@@ -1,0 +1,226 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff7f2;
+    color: #2b2b2b;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    width: 100%;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.08);
+}
+
+.logo h2{
+    font-family: cursive;
+    color: #ff5f6d;
+    font-size: 2rem;
+}
+
+nav{
+    display: flex;
+    gap: 35px;
+}
+
+nav a{
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+nav a:hover{
+    color: #ff5f6d;
+}
+
+/* Right Side */
+
+.header-right{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+/* Account Icon */
+
+.account-icon{
+    width: 50px;
+    height: 50px;
+    padding: 7px;
+    border-radius: 50%;
+    border: 2px solid #ff5f6d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.account-icon:hover{
+    background-color: #ff5f6d;
+    color: white;
+}
+
+/* Cart Button */
+
+.cart-btn{
+    width: 50px;
+    height: 50px;
+    padding: 7px;
+    border-radius: 50%;
+    border: 2px solid #ff5f6d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.cart-btn:hover{
+    background-color: #ff5f6d;
+    color: white;
+}
+
+/*
+.cart-btn{
+    padding: 12px 22px;
+    border: none;
+    border-radius: 40px;
+    background-color: #ff5f6d;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.cart-btn:hover{
+    background-color: #ff3f52;
+}
+*/
+
+/* ================= HERO SECTION ================= */
+
+#Hero{
+    min-height: 90vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 7%;
+    gap: 40px;
+}
+
+/* Left Side */
+
+.hero-text{
+    flex: 1;
+}
+
+.hero-text h1{
+    font-size: 4rem;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.hero-text span{
+    color: #ff5f6d;
+}
+
+.hero-text p{
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    color: #555;
+    max-width: 550px;
+}
+
+.hero-buttons{
+    display: flex;
+    gap: 15px;
+}
+
+.order-btn,
+.menu-btn{
+    padding: 15px 28px;
+    border-radius: 40px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.order-btn{
+    background-color: #ff5f6d;
+    color: white;
+}
+
+.order-btn:hover{
+    background-color: #ff3f52;
+}
+
+.menu-btn{
+    background-color: transparent;
+    border: 2px solid #ff5f6d;
+    color: #ff5f6d;
+}
+
+.menu-btn:hover{
+    background-color: #ff5f6d;
+    color: white;
+}
+
+/* Right Side Image */
+
+.hero-image{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img{
+    width: 100%;
+    max-width: 500px;
+    border-radius: 30px;
+    object-fit: cover;
+    box-shadow: 0px 15px 30px rgba(0,0,0,0.15);
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width: 900px){
+
+    header{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #Hero{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text p{
+        margin: auto;
+        margin-bottom: 30px;
+    }
+
+    .hero-buttons{
+        justify-content: center;
+    }
+
+    .hero-text h1{
+        font-size: 3rem;
+    }
+
+}
