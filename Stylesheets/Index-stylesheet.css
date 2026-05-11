@@ -181,7 +181,23 @@ nav a:hover{
     max-width: 500px;
     border-radius: 30px;
     object-fit: cover;
-    box-shadow: 0px 15px 30px rgba(0,0,0,0.15);
+    box-shadow: 0px 15px 30px rgba(0,0,0,0.15)
+}
+
+
+
+/*============Other Socials ICONS==============*/
+
+.social-icon {
+    font-size: 30px;
+    color: white;
+
+    transition: 0.3s;
+}
+
+.social-icon:hover {
+    color: black;
+    transform: scale(1.15);
 }
 
 /* ================= MOBILE ================= */
