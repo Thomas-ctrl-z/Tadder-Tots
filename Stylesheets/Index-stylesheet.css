@@ -217,6 +217,10 @@ nav a:hover{
         gap: 20px;
     }
 
+    body {
+        padding-top: 150px;
+    }
+
     #Hero{
         flex-direction: column;
         text-align: center;

@@ -1,0 +1,28 @@
+Business Name: Tadder-Tots
+What do I sell: Pop Tarts / Jelly Filled Goods. 
+
+
+How do we sell? Fresh Desert Deliveries + packaged Treats 
+Pages? Checkout Page / 
+
+
+Front Page
+- Finish Menu 
+- Checkout / Cart
+
+Menu: 
+Add Hover descriptions for more information and buttons for Quantity and adding to the cart
+
+Cart Icon:
+On click opens up a window to the side that shows whats currently in the cart and a button at the bottom to go to checkout.
+
+Checkout:
+Left side shows Items in cart and right side shows cost and to confirm that user wants to purchase
+
+Payment Page:
+
+
+backend 
+- Account Login (Google Auth)
+- Payment system (Stride)
+- Contact Page

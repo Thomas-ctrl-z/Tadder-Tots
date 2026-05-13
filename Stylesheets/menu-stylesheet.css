@@ -1,4 +1,4 @@
-#menu {
+.menu {
     background: #fff7f2;
     padding: 4rem 1.5rem;
 }
@@ -70,13 +70,14 @@
     letter-spacing: 0.5px;
 
     position: relative;
+    display: inline-block;
 }
 
 .menu-title::after {
     content: "";
 
     display: block;
-    width: 80px;
+    width: 100%;
     height: 3px;
     background: #ff5f6d;
     margin: 10px auto 0;
@@ -89,10 +90,83 @@
     font-weight: 400;
     color: #666;
     margin-bottom: 2.5rem;
+    margin-top: 1rem;
     letter-spacing: 1px;
 }
 
+.menu-heading {
+    text-align: center;
+}
 
+.menu-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7rem;
+    margin-top: 1rem;
+}
+
+.menu-actions input {
+    width: 70px;
+    padding: 0.6rem;
+    border: 2px solid #ffd6d9;
+    border-radius: 10px;
+    text-align: center;
+    outline: none;
+    background: #fff7f2;
+    transition: 0.3s;
+}
+
+.menu-actions input:focus {
+    border-color: #ff5f6d;
+}
+
+.confirm-btn {
+    background: #ff5f6d;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    
+    cursor: pointer;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.confirm-btn:hover {
+    transform: scale(1.08);
+    opacity: 0.9;
+}
+
+.cancel-btn {
+    background: #f1f1f1;
+    color: #555;
+    border: none;
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.cancel-btn:hover {
+    background: #ffe5e7;
+    color: #ff5f6d;
+
+    transform: scale(1.08);
+}
 
 @media (max-width: 1000px){
     .menu-container{
