@@ -13,6 +13,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: #fff7f2;
     color: #2b2b2b;
+    padding-top: 80px;
 }
 
 /* ================= HEADER ================= */
@@ -23,8 +24,15 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+
     background-color: white;
     box-shadow: 0px 2px 10px rgba(0,0,0,0.08);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 .logo h2{
