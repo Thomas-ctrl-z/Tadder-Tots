@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/Stylesheets/Index-stylesheet.css">
     <link rel="stylesheet" href="/Stylesheets/Footer Stylesheet.css">
     <link rel="stylesheet" href="/Stylesheets/menu-stylesheet.css">
+    <link rel="stylesheet" href="/Stylesheets/cart-sidebar-stylesheet.css">
 
     <script src="https://kit.fontawesome.com/844ae0f91d.js" crossorigin="anonymous"></script>
 </head>
@@ -41,8 +42,8 @@
             </button>
         </a>
 
-        <a href="/Pages/Checkout.html">
-            <button class="cart-btn">
+        
+            <button class="cart-btn" id="open-cart-btn">
                 <svg xmlns="http://www.w3.org/2000/svg" 
                 viewBox="0 0 24 24" 
                 fill="currentColor" 
@@ -54,14 +55,29 @@
                 </svg>
             
             </button>
-        </a>
-
-
+       
     </div>
 </header>
 
 
+<aside id="cart-sidebar" aria-label="Shopping Cart">
+        <div class="cart-header">
+            <h2>Your Cart</h2> 
 
+            <button id="close-cart-btn">
+                ✕
+            </button>
+        </div>
+
+        <div class="cart-items">
+        </div>
+
+        <button class="checkout-btn">
+            Checkout
+        </button>
+</aside>
+
+<div id="cart-overlay"></div>
 
 <section class="menu">
      <div class="menu-heading">
@@ -79,7 +95,8 @@
             <span>$2.50</span>
 
             <div class="menu-actions">
-                <input type="number"
+                <input class="quantity-input"
+                type="number"
                 min="0"
                 placeholder="Qty">
 
@@ -103,7 +120,7 @@
             <span>$2.50</span>
 
             <div class="menu-actions">
-                <input type="number"
+                <input class="quantity-input" type="number"
                 min="0"
                 placeholder="Qty">
 
@@ -127,7 +144,7 @@
             <span>$2.50</span>
 
             <div class="menu-actions">
-                <input type="number"
+                <input class="quantity-input" type="number"
                 min="0"
                 placeholder="Qty">
 
@@ -151,7 +168,7 @@
             <span>$2.50</span>
 
             <div class="menu-actions">
-                <input type="number"
+                <input class="quantity-input" type="number"
                 min="0"
                 placeholder="Qty">
 
@@ -175,7 +192,7 @@
             <span>$2.50</span>
 
             <div class="menu-actions">
-                <input type="number"
+                <input class="quantity-input" type="number"
                 min="0"
                 placeholder="Qty">
 
@@ -199,7 +216,7 @@
             <span>$2.50</span>
 
             <div class="menu-actions">
-                <input type="number"
+                <input class="quantity-input" type="number"
                 min="0"
                 placeholder="Qty">
 
@@ -223,7 +240,7 @@
             <span>$2.50</span>
 
             <div class="menu-actions">
-                <input type="number"
+                <input class="quantity-input" type="number"
                 min="0"
                 placeholder="Qty">
 
@@ -247,7 +264,7 @@
             <span>$2.50</span>
 
             <div class="menu-actions">
-                <input type="number"
+                <input class="quantity-input" type="number"
                 min="0"
                 placeholder="Qty">
 
@@ -282,7 +299,7 @@
                 <span>$1.90</span>
 
                 <div class="menu-actions">
-                <input type="number"
+                <input class="quantity-input" type="number"
                 min="0"
                 placeholder="Qty">
 
@@ -307,7 +324,7 @@
                 <span>$1.90</span>
 
                 <div class="menu-actions">
-                <input type="number"
+                <input class="quantity-input" type="number"
                 min="0"
                 placeholder="Qty">
 
@@ -332,7 +349,7 @@
                 <span>$1.90</span>
 
                 <div class="menu-actions">
-                <input type="number"
+                <input class="quantity-input" type="number"
                 min="0"
                 placeholder="Qty">
 
@@ -357,7 +374,7 @@
                 <span>$1.90</span>
 
                 <div class="menu-actions">
-                <input type="number"
+                <input class="quantity-input" type="number"
                 min="0"
                 placeholder="Qty">
 
@@ -382,7 +399,7 @@
                 <span>$1.90</span>
 
                 <div class="menu-actions">
-                <input type="number"
+                <input class="quantity-input" type="number"
                 min="0"
                 placeholder="Qty">
 
@@ -407,7 +424,7 @@
                 <span>$1.90</span>
 
                 <div class="menu-actions">
-                <input type="number"
+                <input class="quantity-input" type="number"
                 min="0"
                 placeholder="Qty">
 
@@ -432,7 +449,7 @@
                 <span>$1.90</span>
 
                 <div class="menu-actions">
-                <input type="number"
+                <input class="quantity-input" type="number"
                 min="0"
                 placeholder="Qty">
 
@@ -476,5 +493,8 @@
         </div>
     </div>
 </footer>
+
+<script src="/Logic/script.js"></script>
+<script src="/Logic/menu.js"></script>
 </body>
 </html>

@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact</title>
     <link rel="stylesheet" href="/Stylesheets/Index-stylesheet.css">
     <link rel="stylesheet" href="/Stylesheets/Footer Stylesheet.css">
     <link rel="stylesheet" href="/Stylesheets/Contact-Stylesheet.css">
+    <link rel="stylesheet" href="/Stylesheets/cart-sidebar-stylesheet.css">
 </head>
 <body>
     
@@ -38,8 +39,8 @@
             </button>
         </a>
 
-        <a href="/Pages/Checkout.html">
-            <button class="cart-btn">
+       
+            <button class="cart-btn" id="open-cart-btn">
                 <svg xmlns="http://www.w3.org/2000/svg" 
                 viewBox="0 0 24 24" 
                 fill="currentColor" 
@@ -51,11 +52,25 @@
                 </svg>
             
             </button>
-        </a>
-
-
     </div>
 </header>
+
+
+<aside id="cart-sidebar" aria-label="Shopping Cart">
+        <div class="cart-header">
+            <h2>Your Cart</h2> 
+
+            <button id="close-cart-btn">
+                ✕
+            </button>
+        </div>
+
+        <div class="cart-items">
+            <p>No items added yet.</p>
+        </div>
+</aside>
+
+<div id="cart-overlay"></div>
 
 <div id="Form">
 
@@ -120,5 +135,7 @@
         </div>
     </div>
 </footer>
+
+<script src="/Logic/script.js"></script>
 </body>
 </html>
