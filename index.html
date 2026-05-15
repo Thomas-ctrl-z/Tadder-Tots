@@ -45,8 +45,8 @@
             </button>
         </a>
 
-        <a href="/Pages/Checkout.html">
-            <button class="cart-btn">
+       
+            <button class="open-cart-btn">
                 <svg xmlns="http://www.w3.org/2000/svg" 
                 viewBox="0 0 24 24" 
                 fill="currentColor" 
@@ -58,14 +58,30 @@
                 </svg>
             
             </button>
-        </a>
+        
 
 
     </div>
 </header>
 
-<main>
 
+<aside id="cart-sidebar" aria-label="Shopping Cart">
+    
+        <div class="cart-header">
+            <h2>Your Cart</h2> 
+
+            <button id="close-cart-btn">
+                ✕
+            </button>
+        </div>
+
+        <div class="cart-items">
+            <p>No items added yet.</p>
+        </div>
+</aside>
+
+
+<main>
     <section id="Hero">
 
         <!-- LEFT SIDE -->
