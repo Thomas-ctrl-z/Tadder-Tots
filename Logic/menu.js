@@ -1,6 +1,7 @@
 const confirmBtns = document.querySelectorAll(".confirm-btn");
-const cancelBtns = document.querySelectorAll(".cancel-btn");
-const cartItems =document.querySelector(".cart-items");
+const cartItems = document.querySelector(".cart-items");
+const popupMsg = document.getElementById("popup-msg");
+
 
 confirmBtns.forEach(btn => {
     btn.addEventListener('click', function(){
@@ -21,19 +22,19 @@ confirmBtns.forEach(btn => {
         cartItem.textContent = `${itemName} x ${quantity}`;
 
         cartItems.appendChild(cartItem);
+        quantity.value = "";
+        showPopup();
     });
 });
 
 
 
+function showPopup() {
+    popupMsg.classList.add("active");
+
+    setTimeout(()=> {
+        popupMsg.classList.remove("active");
+    }, 2000);
+}
 
 
-
-
-
-
-cancelBtns.forEach(btn => {
-    btn.addEventListener("click", function(){
-        console.log("Clicked");
-    });
-});

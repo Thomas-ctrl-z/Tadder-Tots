@@ -168,6 +168,43 @@
     transform: scale(1.08);
 }
 
+#popup-msg {
+    position: fixed;
+    top: 100px;
+    right: -350px;
+    width: 300px;
+
+    background: white;
+
+    padding: 1rem 1.2rem;
+
+    border-left: 6px solid #ff5f6d;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+
+    z-index: 2000;
+
+    transition: 0.4s ease;
+    opacity: 0;
+}
+
+#popup-msg.active {
+    right: 20px;
+    opacity: 1;
+}
+
+#pop-msg h3 {
+    color: #ff5f6d;
+
+    margin-bottom: 0.4rem;
+}
+
+#popup-msg p{
+    color: #555;
+
+    font-size: 0.95rem;
+}
+
 @media (max-width: 1000px){
     .menu-container{
         grid-template-columns: repeat(2, 1fr);
