@@ -6,6 +6,7 @@
     <title>Register</title>
     <link rel="stylesheet" href="../Stylesheets/Index-stylesheet.css">
     <link rel="stylesheet" href="../Stylesheets/Footer Stylesheet.css">
+    <link rel="stylesheet" href="../Stylesheets/register-stylesheet.css">
     <!--SIGN UP PAGE-->
     <script src="https://kit.fontawesome.com/844ae0f91d.js" crossorigin="anonymous"></script>
 
@@ -56,42 +57,69 @@
     </div>
 </header>
 
-<!-- Add Login and Sigup on same page -->
+<!-- Add Login and Sigup on same page. DONE-->
+ <!-- Add basic Auth and then database. SQL. -->
+  <!-- Prevent forms from reloading the page-->
+
+
+<section id="auth-page">
+    
+<div class="auth-container">
 <div id="Signup-form">
     <h2>Create Your Account</h2>
 
-    <form action="">
+    <form>
         <label for="username"></label>
-        <input type="text" id="username">
+        <input type="text" id="username" autocomplete="off" placeholder="Username">
 
         <label for="email"></label>
-        <input type="text" id="email">
-
+        <input type="text" id="email" autocomplete="off" placeholder="Email">
         <label for="password"></label>
-        <input type="text" id="password">
+        <input type="text" id="password" autocomplete="off" placeholder="Password">
 
         <label for="confirm-pswd"></label>
-        <input type="text" id="confirm-pswd">
+        <input type="text" id="confirm-pswd" autocomplete="off" placeholder="Confirm Password">
 
-        <button type="submit">Sign Up</button>
-        <button>Login</button>
+
+        <div class="form-buttons">
+
+        <button type="submit" class="submit-btn">
+            Sign Up
+        </button>
+
+        <button type="button" class="submit-btn" id="show-login">
+            Login
+        </button>
+
+        </div>
     </form>
 </div>
 
 <div id="Login-form">
     <h2>Login</h2>
 
-    <form action="">
+    <form>
         <label for="username"></label>
-        <input type="text" id="username">
+        <input type="text" id="username" autocomplete="off" placeholder="Username">
 
         <label for="password"></label>
-        <input type="text" id="password">
+        <input type="text" id="password" autocomplete="off" placeholder="Password">
 
-        <button type="submit">Login</button>
-        <button>Sign Up</button>
+        <div class="form-buttons">
+            <button type="submit" class="submit-btn">
+                Login
+            </button>
+
+            <button type="button" class="submit-btn" id="show-signup">
+                Sign Up
+            </button>
+        </div>
     </form>
 </div>
+</div>
+</section>
+
+
 
 
 <footer class="footer">
@@ -122,5 +150,6 @@
     </div>
 </footer>
 
+<script src="../Logic/Register.js"></script>
 </body>
 </html>
