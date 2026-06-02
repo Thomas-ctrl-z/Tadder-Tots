@@ -5,13 +5,40 @@ const showLoginBtn = document.getElementById("show-login");
 const showSignupBtn = document.getElementById("show-signup");
 
 showLoginBtn.addEventListener("click", ()=> {
-    signupForm.style.display = "none";
-    loginForm.style.display = "flex";
+    signupForm.classList.remove("active");
+    loginForm.classList.add("active");
+
+    console.log("clicked 1");
 
 });
 
 showSignupBtn.addEventListener("click", () => {
-    loginForm.style.display = "flex";
-    signupForm.style.display = "none";
+    loginForm.classList.remove("active");
+    signupForm.classList.add("active");
+
+    console.log("clicked 2");
 
 });
+
+
+
+
+
+//--------------Prevent Page Reload--------------
+const signupFormElement = document.querySelector("#Signup-form form");
+
+signupFormElement.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    console.log("Signup Submitted");
+});
+
+const loginFormElement = document.querySelector("#Login-form form");
+
+loginFormElement.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    console.log("Login Submitted");
+});
+
+//-----------END--------------------------------------

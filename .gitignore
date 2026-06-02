@@ -26,3 +26,22 @@ backend
 - Account Login (Google Auth)
 - Payment system (Stride)
 - Contact Page
+
+
+- Node.js (Runs backend)
+- Express.js (Handles routes and requests)
+ 
+ Database 
+ - PostgreSQL 9Industry standard. larger projects)
+ - SQLite (just for learning)
+ - MongoDB
+
+ Password Hashing 
+ - bcrypt
+ - dotenv (never put secrets directly in code(database url etc))
+
+ Login Sessions
+ - express-session (cookies)
+ - jsonwebtoken
+
+ express-validator(Never trust user input.)

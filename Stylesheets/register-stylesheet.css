@@ -23,12 +23,24 @@
     /* overflow: hidden; */
 }
 
-#Signup-form,
+.auth-form {
+    display: none;
+}
+
+.auth-form.active {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* #Signup-form,
 #Login-form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-}
+} */
+
+
 
 #Signup-form h2,
 #Login-form h2 {
@@ -101,7 +113,5 @@
 
 }
 
-#Login-form {
-    display: none;
-}
+
 

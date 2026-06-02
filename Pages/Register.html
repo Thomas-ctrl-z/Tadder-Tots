@@ -60,25 +60,27 @@
 <!-- Add Login and Sigup on same page. DONE-->
  <!-- Add basic Auth and then database. SQL. -->
   <!-- Prevent forms from reloading the page-->
+   <!--Change the styling on the Login/Signup Page switch-->
 
 
 <section id="auth-page">
     
 <div class="auth-container">
-<div id="Signup-form">
+<div id="Signup-form" class="auth-form active">
     <h2>Create Your Account</h2>
 
     <form>
-        <label for="username"></label>
-        <input type="text" id="username" autocomplete="off" placeholder="Username">
+        <label for="signup-username"></label>
+        <input type="text" id="signup-username" autocomplete="off" placeholder="Username">
 
-        <label for="email"></label>
-        <input type="text" id="email" autocomplete="off" placeholder="Email">
-        <label for="password"></label>
-        <input type="text" id="password" autocomplete="off" placeholder="Password">
+        <label for="signup-email"></label>
+        <input type="text" id="signup-email" autocomplete="off" placeholder="Email">
 
-        <label for="confirm-pswd"></label>
-        <input type="text" id="confirm-pswd" autocomplete="off" placeholder="Confirm Password">
+        <label for="signup-password"></label>
+        <input type="text" id="signup-password" autocomplete="off" placeholder="Password">
+
+        <label for="signup-confirm-pswd"></label>
+        <input type="text" id="signup-confirm-pswd" autocomplete="off" placeholder="Confirm Password">
 
 
         <div class="form-buttons">
@@ -91,19 +93,20 @@
             Login
         </button>
 
+
         </div>
     </form>
 </div>
 
-<div id="Login-form">
+<div id="Login-form" class="auth-form">
     <h2>Login</h2>
 
     <form>
-        <label for="username"></label>
-        <input type="text" id="username" autocomplete="off" placeholder="Username">
+        <label for="login-username"></label>
+        <input type="text" id="login-username" autocomplete="off" placeholder="Username">
 
-        <label for="password"></label>
-        <input type="text" id="password" autocomplete="off" placeholder="Password">
+        <label for="login-password"></label>
+        <input type="text" id="login-password" autocomplete="off" placeholder="Password">
 
         <div class="form-buttons">
             <button type="submit" class="submit-btn">
