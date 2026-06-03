@@ -45,3 +45,13 @@ backend
  - jsonwebtoken
 
  express-validator(Never trust user input.)
+
+Template Engine 
+- EJS
+
+
+Write insructions to sql file. Node.js to read and send to SQLite
+Create .db file.
+
+ Gitea (github replacement)
+ shadcn (designs)
