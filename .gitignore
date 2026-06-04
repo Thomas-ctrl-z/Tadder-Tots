@@ -34,6 +34,7 @@ backend
  Database 
  - PostgreSQL 9Industry standard. larger projects)
  - SQLite (just for learning)
+ - better-sqlite3 
  - MongoDB
 
  Password Hashing 
@@ -52,6 +53,11 @@ Template Engine
 
 Write insructions to sql file. Node.js to read and send to SQLite
 Create .db file.
+
+What am I connecting to the database?
+
+Create account/Login information 
+Cart items.
 
  Gitea (github replacement)
  shadcn (designs)
