@@ -54,6 +54,9 @@ Template Engine
 Write insructions to sql file. Node.js to read and send to SQLite
 Create .db file.
 
+html forms -> javascript gets data -> sends to backend -> backend receives it 
+hashes then sends to database
+
 What am I connecting to the database?
 
 Create account/Login information 
