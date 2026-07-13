@@ -69,19 +69,26 @@
 <div id="Signup-form" class="auth-form active">
     <h2>Create Your Account</h2>
 
-    <form>
+    <form action="/register" method="POST">
         <label for="signup-username"></label>
-        <input type="text" id="signup-username" autocomplete="off" placeholder="Username">
+        <input type="text" id="signup-username" name="username" autocomplete="off" placeholder="Username">
 
         <label for="signup-email"></label>
-        <input type="text" id="signup-email" autocomplete="off" placeholder="Email">
+        <input type="text" id="signup-email" name="email" autocomplete="off" placeholder="Email">
 
-        <label for="signup-password"></label>
-        <input type="text" id="signup-password" autocomplete="off" placeholder="Password">
+        <div class="toggle-icon">
 
-        <label for="signup-confirm-pswd"></label>
-        <input type="text" id="signup-confirm-pswd" autocomplete="off" placeholder="Confirm Password">
+            <label for="signup-password"></label>
+            <input type="password" id="signup-password" name="password" autocomplete="off" placeholder="Password">
+            <button type="button" id="toggle-signup-password">Show</button>
+        </div>
+       
+        <div class="toggle-icon">
 
+            <label for="signup-confirm-pswd"></label>
+            <input type="password" id="signup-confirm-pswd" name="confirmPassword" autocomplete="off" placeholder="Confirm Password">
+            <button type="button" id="toggle-signup-confirm-pswd"> Show</button>
+        </div>
 
         <div class="form-buttons">
 
@@ -106,7 +113,7 @@
         <input type="text" id="login-username" autocomplete="off" placeholder="Username">
 
         <label for="login-password"></label>
-        <input type="text" id="login-password" autocomplete="off" placeholder="Password">
+        <input type="password" id="login-password" autocomplete="off" placeholder="Password">
 
         <div class="form-buttons">
             <button type="submit" class="submit-btn">
@@ -154,5 +161,6 @@
 </footer>
 
 <script src="../Logic/Register.js"></script>
+<script src="../Logic/script.js"></script>
 </body>
 </html>

@@ -113,5 +113,24 @@
 
 }
 
+.toggle-icon {
+    position: relative;
+}
+
+.toggle-icon button {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    border: none;
+    border-radius: 7px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.toggle-icon input {
+    padding-right: 70px;
+}
 
 

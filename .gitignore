@@ -32,7 +32,7 @@ backend
 - Express.js (Handles routes and requests)
  
  Database 
- - PostgreSQL 9Industry standard. larger projects)
+ - PostgreSQL Industry standard. larger projects)
  - SQLite (just for learning)
  - better-sqlite3 
  - MongoDB
@@ -61,6 +61,16 @@ What am I connecting to the database?
 
 Create account/Login information 
 Cart items.
+
+Next Steps:
+
+1. hash the Password
+2. Insert into sqlite3
+3. Build Login routes
+4. Add Sessions 
+5. Connect cart to userID
+
+
 
  Gitea (github replacement)
  shadcn (designs)
