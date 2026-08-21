@@ -11,6 +11,18 @@ const toggle_signup = document.getElementById("toggle-signup-password");
 const signup_confirm = document.getElementById("signup-confirm-pswd");
 const toggle_confirm = document.getElementById("toggle-signup-confirm-pswd");
 
+
+const loginFormElement = document.getElementById("login-form")
+
+loginFormElement.addEventListener("submit", async (Event) => {
+    Event.preventDefault();
+
+    const formData = new FormData(loginFormElement);
+    const data = Object.fromEntries(formData.entries());
+
+    console.log(data);
+})
+
 toggle_confirm.addEventListener("click", () => {
     if (signup_confirm.type === "password") {
         signup_confirm.type = "text";
@@ -38,7 +50,7 @@ showLoginBtn.addEventListener("click", ()=> {
     signupForm.classList.remove("active");
     loginForm.classList.add("active");
 
-    console.log("clicked 1");
+    console.log("clicked Login");
 
 });
 
@@ -46,7 +58,7 @@ showSignupBtn.addEventListener("click", () => {
     loginForm.classList.remove("active");
     signupForm.classList.add("active");
 
-    console.log("clicked 2");
+    console.log("clicked Signup");
 
 });
 

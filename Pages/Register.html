@@ -70,6 +70,7 @@
     <h2>Create Your Account</h2>
 
     <form action="/register" method="POST">
+        <!--Add name Attributes to form-->
         <label for="signup-username"></label>
         <input type="text" id="signup-username" name="username" autocomplete="off" placeholder="Username">
 
@@ -107,8 +108,9 @@
 
 <div id="Login-form" class="auth-form">
     <h2>Login</h2>
-
-    <form>
+<!-- You know having Login and login may cause issues right? -->
+ <!--Add name attributes to form-->
+    <form id="login-form">
         <label for="login-username"></label>
         <input type="text" id="login-username" autocomplete="off" placeholder="Username">
 
