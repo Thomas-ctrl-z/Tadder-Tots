@@ -1,4 +1,5 @@
 const express = require("express");
+const session = require("express-session");
 
 const cors = require("cors");
 const app = express();
@@ -6,6 +7,7 @@ const bcrypt = require("bcrypt");
 
 const fs = require ("fs");
 const Database = require("better-sqlite3");
+const { error } = require("console");
 
 const db = new Database('app.db');
 
@@ -15,10 +17,21 @@ const sql = fs.readFileSync("schema.sql", "utf8");
 db.exec(sql);
 console.log("Database Initialized");
 
-app.use(cors());
+app.use(cors({
+    origin: "http://127.0.0.1:5500",
+    credentials: true
+}));
+
 app.use(express.static("public"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
+
+
+app.use(session ({
+    secret: "your-secret-key",
+    resave: false,
+    saveUninitialized: false
+}));
 
 
 //==================================
@@ -95,7 +108,10 @@ app.post("/login", async (req, res) => {
             });
         }
 
+        req.session.userId = user.id;
+
         console.log("User logged in:", user.username);
+        console.log("Session ID:", req.sessionID);
 
         res.status(200).json({
             message: "Login succesful"
@@ -109,7 +125,23 @@ app.post("/login", async (req, res) => {
 });
 
 
+//==================================
+//===== SESSION DATA ROUTE ======
+//==================================
 
+app.get("/test-session", (req, res) => {
+    console.log("session: ", req.session);
+
+    if (!req.session.userId) {
+        return res.status(401).json({
+            error:"Not Logged in"
+        });
+    }
+    res.json({
+        message: "You are logged in",
+        userId: req.session.userId
+    });
+});
 
 
 app.listen(3000, () => {
@@ -117,3 +149,8 @@ app.listen(3000, () => {
 
 });
 
+
+
+//==================================
+//========= USER SESSIONS ==========
+//==================================
