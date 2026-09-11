@@ -32,7 +32,7 @@ backend
 - Express.js (Handles routes and requests)
  
  Database 
- - PostgreSQL Industry standard. larger projects)
+ - PostgreSQL Industry standard. (larger projects)
  - SQLite (just for learning)
  - better-sqlite3 
  - MongoDB
@@ -76,3 +76,21 @@ Next Steps:
  shadcn (designs)
 
  password masking
+
+ //Basic Authentication Chain
+ 
+ Register
+→ user saved in SQLite
+→ password hashed with bcrypt
+
+Login
+→ password verified
+→ req.session.userId created
+
+Session
+→ server remembers who is logged in
+
+/account
+→ reads req.session.userId
+→ queries that user's database record
+→ returns their account information

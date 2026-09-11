@@ -14,13 +14,25 @@ const toggle_confirm = document.getElementById("toggle-signup-confirm-pswd");
 
 const loginFormElement = document.getElementById("login-form")
 
-loginFormElement.addEventListener("submit", async (Event) => {
-    Event.preventDefault();
+loginFormElement.addEventListener("submit", async (event) => {
+    event.preventDefault();
 
     const formData = new FormData(loginFormElement);
     const data = Object.fromEntries(formData.entries());
 
     console.log(data);
+
+    const response = await fetch("http://127.0.0.1:3000/login", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        credentials: "include",
+        body: JSON.stringify(data)
+    });
+
+    const result = await response.json();
+    console.log(result);
 })
 
 toggle_confirm.addEventListener("click", () => {
@@ -83,23 +95,3 @@ form.addEventListener("submit", async (event) => {
     console.log(await response.text());
 });
 
-
-
-// //--------------Prevent Page Reload--------------
-// const signupFormElement = document.querySelector("#Signup-form form");
-
-// signupFormElement.addEventListener("submit", (event) => {
-//     event.preventDefault();
-
-//     console.log("Signup Submitted");
-// });
-
-// const loginFormElement = document.querySelector("#Login-form form");
-
-// loginFormElement.addEventListener("submit", (event) => {
-//     event.preventDefault();
-
-//     console.log("Login Submitted");
-// });
-
-//-----------END--------------------------------------

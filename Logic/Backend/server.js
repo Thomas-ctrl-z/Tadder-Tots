@@ -126,7 +126,7 @@ app.post("/login", async (req, res) => {
 
 
 //==================================
-//===== SESSION DATA ROUTE ======
+//===== TEST SESSION DATA ROUTE ======
 //==================================
 
 app.get("/test-session", (req, res) => {
@@ -144,13 +144,45 @@ app.get("/test-session", (req, res) => {
 });
 
 
+
+//==================================
+//===== ACCOUNTS DATA ROUTE ========
+//==================================
+
+
+app.get("/account", (req, res) => {
+    if (!req.session.userId) {
+        return res.status(401).json({
+            error: "Not logged in"
+        });
+    }
+
+    const user = db.prepare(`
+        SELECT id, username, email, created_at
+        FROM users
+        WHERE id = ?
+        `).get(req.session.userId);
+
+    if (!user) {
+        return res.status(404).json({
+            error: "User not found"
+        });
+    } 
+
+    res.json({
+        user: user
+    });
+});
+
+
+
+
+//==================================
+//===== SERVER STARTUP ============
+//==================================
 app.listen(3000, () => {
     console.log("server running on port 3000");
 
 });
 
 
-
-//==================================
-//========= USER SESSIONS ==========
-//==================================
